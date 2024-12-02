@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='works.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Works</h1>
+    </header>
+
+    <main>
+        <div class="card">
+            <p><a href="{{ url_for('linked_list') }}">Linked List</a></p>
+
+        </div>
+        <div class="card">
+            <p>Queue</p>
+        </div>
+        <div class="card">
+            <p>Stack</p>
+        </div>
+        <div class="card">
+            <p>Trees</p>
+        </div>
+    </main>
+
+    <footer>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </footer>
+</body>
+
+</html>

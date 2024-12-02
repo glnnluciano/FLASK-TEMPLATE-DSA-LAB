@@ -1,14 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CONTACT.css') }}">
+
 </head>
 
 <body>
-    <h1>{{ content }}</h1>
-    <p>This is the Contact page. Please reach out to us with your inquiries.</p>
-    <button onclick="location.href='/'">Go to Home</button>
+
+
+    <div class="container">
+        <h1 class="contacts-title">Contacts</h1>
+
+
+        <div class="contact-grid">
+            <div class="contact-box">
+                <img src="pictureapril.png" alt="April's Picture">
+                <h2 class="role">FRONT-END DEVELOPER</h2>
+                <h3 class="contact-box-title">Salangsang, April Mae L.</h2>
+                    <p class="contact-description">A short description of April's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="pictureceline.png" alt="Celine's Picture">
+                <h2 class="role">FRONT-END DEVELOPER</h2>
+                <h3 class="contact-box-title">Celine</h2>
+                    <p class="contact-description">A short description of Celine's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="picturejam.png" alt="Jamaica's Picture">
+                <h2 class="role">UIX DESIGNER</h2>
+                <h3 class="contact-box-title">Palilio, Jamaica</h2>
+                    <p class="contact-description">A short description of Jamaica's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="picturemahaba.png" alt="Mahaba">
+                <h2 class="role">UIX DESIGNER </h2>
+                <h3 class="contact-box-title">Mahaba</h2>
+                    <p class="contact-description">A short description of Mahaba's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="pictureglenn.png" alt="Glenn's Picture">
+                <h2 class="role">BACK-END DEVELOPER</h2>
+                <h3 class="contact-box-title">Luciano, Glenn</h2>
+                    <p class="contact-description">A short description of Glenn's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="picturetiedra.png" alt="Tiedra's Picture">
+                <h2 class="role">BACK-END DEVELOPER</h2>
+                <h3 class="contact-box-title">Tiedra</h2>
+                    <p class="contact-description">A short description of Tiedra's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+            <div class="contact-box">
+                <img src="picturecosare.png" alt="Cosare's Picture">
+                <h2 class="role">BACK-END DEVELOPER</h2>
+                <h3 class="contact-box-title">Cosare</h2>
+                    <p class="contact-description">A short description of Cosare's service.</p>
+                    <div class="contact-details">
+                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
+                    </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </footer>
 </body>
 
 </html>

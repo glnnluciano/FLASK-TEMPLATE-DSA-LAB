@@ -1,0 +1,87 @@
+/* Linked List Page Specific Styles */
+.linked-list-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.linked-list-content h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+}
+
+.linked-list-content h3 {
+    font-size: 26px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.linked-list-content p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.linked-list-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.linked-list-content ul li {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.linked-list-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffd6d9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.linked-list-content a:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+footer .home-button {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+footer .home-button:hover {
+    background-color: #ffd6d9;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 3 - Laboratory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
-    <h1>{{ content }}</h1>
-    <button onclick="location.href='/profile'">Go to Profile Page</button>
-    <button onclick="location.href='/about'">Go to About Page</button>
-    <button onclick="location.href='/contact'">Go to Contact Page</button>
-    <button onclick="location.href='/link list'">Go link list Page</button>
+    <div class="container">
+        <header>
+            <h1>Group 3</h1>
+            <p>Group Laboratory in Data Structure and Algorithms</p>
+        </header>
+        <div class="navigation">
+            <div class="nav-item">
+                <a href="{{ url_for('about') }}"><button>ABOUT</button></a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ url_for('works') }}"><button>WORKS</button></a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ url_for('home') }}"><button>HOME</button></a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

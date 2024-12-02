@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ABOUT.css') }}">
+
 </head>
 
 <body>
-    <h1>{{ content }}</h1>
-    <p>This is the About page. Learn more about the services we offer and the team behind it.</p>
-    <button onclick="location.href='/'">Go to Home</button>
+    <header>
+        <h1 class="title">About</h1>
+    </header>
+
+
+    <main>
+        <p>
+            This website is dedicated to exploring various Data Structures and Algorithms studied by second-year
+            Computer Engineering students at the Polytechnic University of the Philippines. It covers essential topics
+            such as Linked Lists, Stacks, Queues, and Trees, all of which are part of the curriculum taught by Professor
+            Godofredo Avena.
+        </p>
+        <p>
+            In addition to these core topics, the website also features practical examples, code implementations, and
+            visual representations to help students grasp complex concepts more effectively.
+        </p>
+        <p>
+            The aim is to provide a comprehensive resource that not only aids in academic learning but also prepares
+            students for real-world applications in software development.
+        </p>
+    </main>
+
+
+    <footer>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </footer>
 </body>
 
 </html>
