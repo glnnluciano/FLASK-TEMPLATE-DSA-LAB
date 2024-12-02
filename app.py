@@ -23,5 +23,10 @@ def contact():
     return render_template('contact.html', title="Contact Page", content="Get in touch with us via the contact form.")
 
 
+@app.route('/link list')
+def link_list():
+    return render_template('link list.html', title="Link List Page", content="link list ito")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
