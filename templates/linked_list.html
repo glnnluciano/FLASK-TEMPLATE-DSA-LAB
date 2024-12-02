@@ -5,12 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linked List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='works.css') }}">
 </head>
 
 <body>
-    <h1>Linked List Operations</h1>
-    <p>Here, you will learn about linked lists and how to perform various operations on them.</p>
-    <!-- Add any content specific to linked lists here -->
+    <header>
+        <h1 class="title">Linked List Operations</h1>
+    </header>
+
+    <div>
+        <h3>Linked List:</h3>
+        <ul>
+            {% for node in linked_list %}
+            <li>{{ node }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <form action="{{ url_for('linked_list') }}" method="post">
+            <label for="action">Choose an action:</label>
+            <select name="action" id="action">
+                <option value="insert_beginning">Insert at Beginning</option>
+                <option value="insert_end">Insert at End</option>
+                <option value="delete_beginning">Delete from Beginning</option>
+                <option value="delete_end">Delete from End</option>
+            </select>
+            <input type="text" name="value" placeholder="Enter value">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="{{ url_for('home') }}" class="home-button">Home</a>
+    </footer>
 </body>
 
 </html>
