@@ -2,8 +2,9 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 # Initialize a simple linked list as a global list for demonstration
-linked_list_data = ['Node 1', 'Node 2', 'Node 3']
+linked_list_data = []
 
 # Route for the home page
 
@@ -26,6 +27,10 @@ def about():
 def works():
     return render_template('works.html')
 
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 # Route for the Linked List page, handling both GET and POST methods
 
 

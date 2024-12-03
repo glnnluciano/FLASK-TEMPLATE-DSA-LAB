@@ -6,102 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CONTACT.css') }}">
-
 </head>
 
 <body>
-
-
     <div class="container">
         <h1 class="contacts-title">Contacts</h1>
 
-
         <div class="contact-grid">
             <div class="contact-box">
-                <img src="pictureapril.png" alt="April's Picture">
+                <img src="{{ url_for('static', filename='images/salangsang.png') }}" alt="April's Picture">
                 <h2 class="role">FRONT-END DEVELOPER</h2>
-                <h3 class="contact-box-title">Salangsang, April Mae L.</h2>
-                    <p class="contact-description">A short description of April's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <h3 class="contact-box-title">Salangsang, April Mae L.</h3>
+                <p class="contact-description">She is a creative and detail-oriented front-end developer
+                    distinguished by her talent for designing intuitive and visually appealing user interfaces.
+                    Proficient in HTML and CSS, she effectively bridges the gap between aesthetic design and
+                    functional implementation. April holds the position of Senior Data Associate at AWS Club at PUP
+                    - Manila and serves as a Data Cadet at the Google Developer Group PUP - Manila.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: salangsang.abril@gmail.com</p>
+                </div>
             </div>
 
-
             <div class="contact-box">
-                <img src="pictureceline.png" alt="Celine's Picture">
+                <img src="{{ url_for('static', filename='images/paguio.png') }}" alt="Celine's Picture">
                 <h2 class="role">FRONT-END DEVELOPER</h2>
-                <h3 class="contact-box-title">Celine</h2>
-                    <p class="contact-description">A short description of Celine's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <h3 class="contact-box-title">Paguio, Celine Rose</h3>
+                <p class="contact-description">She is an accomplished front-end developer with a strong eye for
+                    design and a passion for creating dynamic, user-friendly interfaces. Proficient in HTML and CSS,
+                    she has the ability to transform concepts into engaging, responsive web experiences. Her
+                    expertise combines creativity with technical precision to deliver visually appealing solutions
+                    that resonate with users.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: paguiocelinerose@gmail.com</p>
+                </div>
             </div>
 
-
             <div class="contact-box">
-                <img src="picturejam.png" alt="Jamaica's Picture">
-                <h2 class="role">UIX DESIGNER</h2>
-                <h3 class="contact-box-title">Palilio, Jamaica</h2>
-                    <p class="contact-description">A short description of Jamaica's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <img src="{{ url_for('static', filename='images/palillo.png') }}" alt="Jamaica's Picture">
+                <h2 class="role">UI/UX DESIGNER</h2>
+                <h3 class="contact-box-title">PalilLo, Jamaica</h3>
+                <p class="contact-description">She is a skilled professional with a diverse background in design and
+                    development. She has one year of experience in UI/UX design, creating user-centered interfaces
+                    that improve digital experiences. With two years as a junior front-end developer, she developed
+                    expertise in building responsive and visually appealing web applications. Her career progressed
+                    with two years as a senior machine learning developer, where she implemented advanced AI
+                    solutions to address complex challenges and drive innovation.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: maicapalillo15@gmail.com</p>
+                </div>
             </div>
 
-
             <div class="contact-box">
-                <img src="picturemahaba.png" alt="Mahaba">
-                <h2 class="role">UIX DESIGNER </h2>
-                <h3 class="contact-box-title">Mahaba</h2>
-                    <p class="contact-description">A short description of Mahaba's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <img src="{{ url_for('static', filename='images/mahaba.png') }}" alt="Mahaba">
+                <h2 class="role">UI/UX DESIGNER</h2>
+                <h3 class="contact-box-title">Mahaba, Godwin</h3>
+                <p class="contact-description">He is a perceptive UI/UX designer with a profound understanding of
+                    user behavior and a talent for crafting intuitive digital experiences. From wireframing to the
+                    development of high-fidelity prototypes, he ensures that each design decision enhances usability
+                    and engagement. His proficiency in tools such as Figma, along with his expertise in usability
+                    testing, guarantees a harmonious balance between aesthetics and functionality.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: mahabagodwinanton@gmail.com</p>
+                </div>
             </div>
 
-
             <div class="contact-box">
-                <img src="pictureglenn.png" alt="Glenn's Picture">
+                <img src="{{ url_for('static', filename='images/luciano.png') }}" alt="Glenn's Picture">
                 <h2 class="role">BACK-END DEVELOPER</h2>
-                <h3 class="contact-box-title">Luciano, Glenn</h2>
-                    <p class="contact-description">A short description of Glenn's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <h3 class="contact-box-title">Luciano, Glenn</h3>
+                <p class="contact-description">He is a highly skilled back-end developer recognized for his ability
+                    to construct robust and scalable systems. He excels in tackling complex challenges, optimizing
+                    database performance, and ensuring the seamless integration of server-side logic. With
+                    proficiency in programming languages such as Python, Glenn serves as a pivotal member of the
+                    technical team, consistently delivering high-performance solutions that empower impactful
+                    applications.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: glnnluciano@gmail.com</p>
+                </div>
             </div>
-
 
             <div class="contact-box">
-                <img src="picturetiedra.png" alt="Tiedra's Picture">
+                <img src="{{ url_for('static', filename='images/tiedra.png') }}" alt="Tiedra's Picture">
                 <h2 class="role">BACK-END DEVELOPER</h2>
-                <h3 class="contact-box-title">Tiedra</h2>
-                    <p class="contact-description">A short description of Tiedra's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <h3 class="contact-box-title">Tiedra, Jester Carl</h3>
+                <p class="contact-description">He is a highly skilled back-end developer committed to the design of
+                    efficient, secure, and scalable systems. With extensive expertise in server-side technologies
+                    such as Python, as well as database management, he ensures seamless data flow and robust
+                    application performance. His analytical mindset and dedication to innovation establish him as an
+                    invaluable asset to any development team.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: jestertiedra@gmail.com</p>
+                </div>
             </div>
-
 
             <div class="contact-box">
-                <img src="picturecosare.png" alt="Cosare's Picture">
+                <img src="{{ url_for('static', filename='images/cosare.png') }}" alt="Cosare's Picture">
                 <h2 class="role">BACK-END DEVELOPER</h2>
-                <h3 class="contact-box-title">Cosare</h2>
-                    <p class="contact-description">A short description of Cosare's service.</p>
-                    <div class="contact-details">
-                        <p class="contact-detail">EMAIL: hello@reallygreatsite.com</p>
-                    </div>
+                <h3 class="contact-box-title">Cosare, Daniel Rein</h3>
+                <p class="contact-description">He is a dynamic and accomplished professional with a comprehensive
+                    background in robotics, artificial intelligence, and creative innovation. As a member of the
+                    Philippine Robotics Team (2019-present), he has actively contributed to both national and
+                    international projects, demonstrating exceptional technical abilities and teamwork skills. In
+                    his role as Vice President of Tagaytay Science Robotics (2020-2021), he exhibited noteworthy
+                    leadership and a steadfast commitment to advancing STEM initiatives. Currently, he is excelling
+                    as a Senior Engineer in Machine Learning/AI (2023-2024), driving innovation within cutting-edge
+                    technologies. His creative talents are evident in his involvement with the Creatives team at
+                    Aries Theatrical Productions (2023-2024), where he successfully merges artistic vision with
+                    technical expertise. As the Lead for the Internet of Things (2024-present), he is at the
+                    forefront of spearheading IoT projects, integrating smart technologies to address real-world
+                    challenges. Concurrently, as a Cadet in Cybersecurity (2024-present), he is broadening his
+                    expertise in securing digital infrastructures.</p>
+                <div class="contact-details">
+                    <p class="contact-detail">EMAIL: reincosare07@gmail.com</p>
+                </div>
             </div>
-
-
         </div>
 
-
+        <footer>
+            <a href="{{ url_for('home') }}" class="home-button">Home</a>
+        </footer>
     </div>
-
-    <footer>
-        <a href="{{ url_for('home') }}" class="home-button">Home</a>
-    </footer>
 </body>
 
 </html>
