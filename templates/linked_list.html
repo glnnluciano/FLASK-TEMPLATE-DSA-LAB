@@ -4,41 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linked List</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='works.css') }}">
+    <title>Linked List Operations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='linked_list.css') }}">
 </head>
 
 <body>
-    <header>
-        <h1 class="title">Linked List Operations</h1>
-    </header>
+    <div class="container">
+        <h1 class="text-center">Linked List Operations</h1>
 
-    <div>
-        <h3>Linked List:</h3>
-        <ul>
-            {% for node in linked_list %}
-            <li>{{ node }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+        <div class="card mt-4">
+            <div class="card-header">
+                Current Linked List:
+            </div>
+            <div class="card-body">
+                <ul id="linkedList">
+                    {% for item in linked_list %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                    {% if not linked_list %}
+                    <li><em>List is empty</em></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
 
-    <div>
-        <form action="{{ url_for('linked_list') }}" method="post">
-            <label for="action">Choose an action:</label>
-            <select name="action" id="action">
-                <option value="insert_beginning">Insert at Beginning</option>
-                <option value="insert_end">Insert at End</option>
-                <option value="delete_beginning">Delete from Beginning</option>
-                <option value="delete_end">Delete from End</option>
-            </select>
-            <input type="text" name="value" placeholder="Enter value">
-            <button type="submit">Submit</button>
+        <form method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="valueInput" class="form-label">Enter value:</label>
+                <input type="text" class="form-control" name="value" id="valueInput">
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary" name="action" value="insert_beginning">Insert at
+                    Beginning</button>
+                <button type="submit" class="btn btn-primary" name="action" value="insert_end">Insert at End</button>
+                <button type="submit" class="btn btn-primary" name="action" value="search">Search</button>
+                <button type="submit" class="btn btn-primary" name="action" value="delete_beginning">Remove from
+                    Beginning</button>
+                <button type="submit" class="btn btn-primary" name="action" value="delete_end">Remove from End</button>
+                <button type="submit" class="btn btn-primary" name="action" value="delete_at">Remove at Index</button>
+            </div>
         </form>
+
+        {% if message %}
+        <div class="alert alert-info mt-3">{{ message }}</div>
+        {% endif %}
+
+        <footer class="mt-4">
+            <a href="/">Home</a>
+        </footer>
     </div>
 
-    <footer>
-        <a href="{{ url_for('home') }}" class="home-button">Home</a>
-    </footer>
+
 </body>
 
 </html>

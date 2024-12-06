@@ -1,8 +1,8 @@
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f5c6ff, #ffd6d9, #c9e7f5);
+    background: linear-gradient(135deg, #c4732d, #d4a55f, #d38b38);
     color: #333;
 }
 

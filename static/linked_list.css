@@ -1,87 +1,81 @@
-/* Linked List Page Specific Styles */
-.linked-list-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 30px auto;
-    max-width: 800px;
-    text-align: left;
-    font-size: 18px;
-}
-
-.linked-list-content h2 {
-    font-size: 32px;
-    color: #333;
-    text-align: center;
-}
-
-.linked-list-content h3 {
-    font-size: 26px;
-    color: #666;
-    margin-top: 20px;
-}
-
-.linked-list-content p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-    margin-top: 10px;
-}
-
-.linked-list-content ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.linked-list-content ul li {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.linked-list-content a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ffd6d9;
-    color: #333;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.linked-list-content a:hover {
-    background-color: #333;
-    color: #fff;
-    transform: translateY(-5px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #c4732d, #d4a55f, #d38b38);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 100vh;
+    color: #000;
 }
 
-footer .home-button {
-    text-decoration: none;
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    width: 50%;
+}
+
+header h1 {
+    font-size: 50px;
+    color: #c47c4d;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.list-display {
+    margin: 20px 0;
+    font-size: 1.2rem;
     color: #333;
-    border: 1px solid #333;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    display: inline-block;
-    position: relative;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 1px solid #c47c4d;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f9f3eb;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-footer .home-button:hover {
-    background-color: #ffd6d9;
-    color: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+button {
+    background: transparent;
+    border: 1px solid #c47c4d;
+    border-radius: 20px;
+    color: #c47c4d;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffd9c0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    border: 1px solid #c47c4d;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 30px);
+    max-width: 400px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4d4d4d;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #7a7a7a;
 }
