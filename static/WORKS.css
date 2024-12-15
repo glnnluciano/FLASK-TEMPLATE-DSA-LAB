@@ -1,23 +1,34 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #c4732d, #d4a55f, #d38b38);
+    background: linear-gradient(135deg, #cb5e28, #d08a4d, #dacb55);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    /* Corrected misplaced semicolon */
 }
 
+body {
+    /* ... other styles ... */
+    background-image: url('/static/images/WORKS.jpeg');
+    );
+    /* Replace 'your-image.jpg' with your image path */
+    background-size: cover;
+    /* Ensure the image covers the entire background */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent image repetition */
+}
 
 header {
     text-align: center;
     margin-bottom: 50px;
+    /* Fixed extra space issue */
 }
-
 
 .title {
     font-size: 48px;
@@ -27,51 +38,56 @@ header {
     letter-spacing: 5px;
 }
 
-
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    margin-top: 400px;
+    /* Adjust this value to control the spacing */
 }
 
-
 .card {
-    background-color: #d4a55f;
+    background-color: transparent;
+    border: 1px solid #da70c7;
+    color: #da70c7;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
     width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Optional: Added shadow for depth */
     transition: transform 0.3s ease-in-out;
+    /* Smooth animation */
 }
-
 
 .card:hover {
     transform: translateY(-5px);
+    /* Lift effect on hover */
 }
-
 
 .card p {
     font-size: 24px;
     font-weight: bold;
 }
 
-
 footer {
     text-align: center;
     padding: 20px;
     display: flex;
+    /* Enable flexbox for centering */
     justify-content: center;
+    /* Center horizontally */
     align-items: center;
+    /* Center vertically (if necessary) */
     height: 100px;
+    /* Optional: Set a height for the footer to ensure vertical centering works */
 }
-
 
 footer .home-button {
     text-decoration: none;
-    color: #000;
-    border: 1px solid #000;
+    color: #da70c7;
+    /* Match the heading */
+    border: 1px solid #da70c7;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 16px;
@@ -80,15 +96,17 @@ footer .home-button {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-
+/* Hover Effect with Movement */
 footer .home-button:hover {
-    background-color: #d38b38;
+    background-color: transparent;
     color: #fff;
     transform: translateY(-5px);
+    /* Slight upward motion */
     box-shadow: 0 5px 15px 333;
+    /* Add a shadow for depth */
 }
 
-
+/* Oscillation Effect */
 footer .home-button:hover::before {
     content: '';
     position: absolute;
@@ -101,9 +119,7 @@ footer .home-button:hover::before {
     animation: pulse 1s infinite ease-in-out;
 }
 
-
-
-
+/* Keyframes for Oscillation */
 @keyframes pulse {
     0% {
         transform: scale(1);

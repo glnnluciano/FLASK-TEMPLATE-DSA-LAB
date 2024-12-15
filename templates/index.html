@@ -5,17 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 3 - Laboratory</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='INDEX.css') }}">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Group 3</h1>
-            <p>Data Structure and Algorithms</p>
-            <p1>Group Laboratory</p1>
-
-        </header>
+    <header>
         <div class="navigation">
             <div class="nav-item">
                 <a href="{{ url_for('about') }}"><button>ABOUT</button></a>
@@ -24,10 +18,10 @@
                 <a href="{{ url_for('works') }}"><button>WORKS</button></a>
             </div>
             <div class="nav-item">
-                <a href="{{ url_for('contact') }}"><button>CONTACT</button></a>
+                <a href="{{ url_for('contact') }}"><button>CONTACTS</button></a>
             </div>
         </div>
-    </div>
+    </header>
 </body>
 
 </html>

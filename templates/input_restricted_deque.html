@@ -2,21 +2,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Restricted Deque Operations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='linked_list.css') }}">
 </head>
+
 <body>
     <h1>Input Restricted Deque Operations</h1>
 
     <h2>Current Deque:</h2>
     <ul>
         {% for item in inputrestricted %}
-            <li>{{ item }}</li>
+        <li>{{ item }}</li>
         {% endfor %}
         {% if not inputrestricted %}
-            <li><em>Deque is empty</em></li>
+        <li><em>Deque is empty</em></li>
         {% endif %}
     </ul>
 
@@ -30,11 +33,12 @@
     </form>
 
     {% if message %}
-        <p><strong>{{ message }}</strong></p>
+    <p><strong>{{ message }}</strong></p>
     {% endif %}
 
     <footer class="mt-4">
-        <a href="/">Home</a>
+        <a href="{{ url_for('works') }}" class="home-button">Works</a>
     </footer>
 </body>
+
 </html>

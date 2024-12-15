@@ -1,79 +1,41 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #c4732d, #d4a55f, #d38b38);
-    color: #333;
+    background-image: url('/static/images/92bcb293-0985-420e-9168-016f6c346b0a.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-
-
-
-header {
-    text-align: center;
-    padding: 50px 0;
+.image {
+    width: 450px;
+    height: auto;
+    border: 2px solid #da70c7;
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    animation-duration: 3s;
+    animation-name: spin;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease-in-out;
+    /* Add transition for smooth hover effect */
 }
 
-
-.title {
-    font-size: 48px;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+.image:hover {
+    transform: scale(1.2);
+    /* Increased scale for a more pronounced effect */
+    animation-play-state: paused;
+    /* Pause the animation on hover */
+    cursor: pointer;
+    /* Change cursor to indicate interactivity */
 }
-
-
-
-
-@keyframes titleAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-
-main {
-    padding: 20px 40px;
-    text-align: justify;
-    line-height: 1.6;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-p {
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-    animation-delay: 0.5s;
-}
-
-
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -82,11 +44,11 @@ footer {
     height: 100px;
 }
 
-
 footer .home-button {
     text-decoration: none;
-    color: #333;
-    border: 1px solid #333;
+    color: #da70c7;
+    /* Match the heading */
+    border: 1px solid #da70c7;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 16px;
@@ -95,15 +57,17 @@ footer .home-button {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-
+/* Hover Effect with Movement */
 footer .home-button:hover {
-    background-color: #d38b38;
+    background-color: transparent;
     color: #fff;
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(192, 119, 180, 0.4);
+    /* Slight upward motion */
+    box-shadow: 0 5px 15px 333;
+    /* Add a shadow for depth */
 }
 
-
+/* Oscillation Effect */
 footer .home-button:hover::before {
     content: '';
     position: absolute;
@@ -114,22 +78,4 @@ footer .home-button:hover::before {
     border-radius: 20px;
     border: 2px dashed rgba(192, 119, 180, 0.5);
     animation: pulse 1s infinite ease-in-out;
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
 }

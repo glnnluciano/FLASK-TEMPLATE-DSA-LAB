@@ -1,64 +1,16 @@
 body {
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(135deg, #c4732d, #d4a55f, #d38b38);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #000;
+    background-image: url('/static/images/55c1a8b9-0fc1-4db2-9278-71c028ea47ea.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-
-.container {
-    text-align: center;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 70px;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
-
-header p {
-
-    font-size: 55px;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    margin: 0;
-    padding: 0;
-}
-
-header p1 {
-    font-size: 40px;
-    margin-top: 30px;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 
 .navigation {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .nav-item {
@@ -66,10 +18,31 @@ header p1 {
 }
 
 button {
+    /* ... other button styles ... */
+    display: block;
+    /* Ensure buttons are visible */
+    visibility: visible;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 550px;
+    /* Increased top margin */
+    margin-bottom: 60px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+button {
     background: transparent;
-    border: 1px solid #000;
-    border-radius: 20px;
-    color: #000;
+    border: 1px solid #da70c7;
+    color: #da70c7;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -77,8 +50,12 @@ button {
 }
 
 button:hover {
-    background-color: ffd6d9(226, 163, 163, 0.855);
+    background-color: #ffd6d9(226, 163, 163, 0.855);
+    /* Light pinkish hover background */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow effect */
     transform: scale(1.05);
+    /* Slightly enlarge button */
     transition: all 0.3s ease-in-out;
+    /* Animation timing */
 }

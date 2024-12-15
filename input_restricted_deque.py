@@ -1,5 +1,3 @@
-# input_restricted_deque.py
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -10,7 +8,7 @@ class InputRestrictedDeque:
     def __init__(self):
         self.head = None
         self.tail = None
-    
+
     def is_empty(self):
         return self.head == None
 
@@ -42,19 +40,15 @@ class InputRestrictedDeque:
                 return value
 
             temp = self.head
-            while temp.next.next:  
+            while temp.next.next:
                 temp = temp.next
-            value = temp.next.data 
-            self.tail = temp  
-            self.tail.next = None  
+            value = temp.next.data
+            self.tail = temp
+            self.tail.next = None
             return value
 
     def __iter__(self):
         current = self.head
         while current:
             yield current.data
-<<<<<<< HEAD
             current = current.next
-=======
-            current = current.next
->>>>>>> 9640101019e38bd550daae55badea6923d0c9791
