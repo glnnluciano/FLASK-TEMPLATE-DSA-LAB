@@ -53,4 +53,8 @@ class InputRestrictedDeque:
         current = self.head
         while current:
             yield current.data
+<<<<<<< HEAD
             current = current.next
+=======
+            current = current.next
+>>>>>>> 9640101019e38bd550daae55badea6923d0c9791
