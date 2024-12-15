@@ -1,0 +1,36 @@
+<!--input_restricted_deque.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Restricted Deque Operations</title>
+</head>
+<body>
+    <h1>Input Restricted Deque Operations</h1>
+
+    <h2>Current Deque:</h2>
+    <ul>
+        {% for item in inputrestricted %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        {% if not inputrestricted %}
+            <li><em>Deque is empty</em></li>
+        {% endif %}
+    </ul>
+
+    <h2>Perform an Operation:</h2>
+    <form method="POST">
+        <label for="value">Enter value:</label>
+        <input type="text" name="value" id="value">
+        <button type="submit" name="action" value="enqueue_at_end">Enqueue at End</button>
+        <button type="submit" name="action" value="deque_at_beginning">Dequeue from Beginning</button>
+        <button type="submit" name="action" value="deque_at_end">Dequeue from End</button>
+    </form>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+</body>
+</html>
