@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infix to Postfix Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Infix to Postfix Converter</h1>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Conversion Steps:
+            </div>
+            <div class="card-body">
+                <ul id="conversionSteps">
+                    {% for item in postfix_steps %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                    {% if not postfix_steps %}
+                    <li><em>No steps available</em></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <form method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="infixInput" class="form-label">Enter Infix Expression:</label>
+                <input type="text" class="form-control" name="infix" id="infixInput" placeholder="e.g., A+B*C" required>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary" name="action" value="push">Convert</button>
+                <button type="submit" class="btn btn-secondary" name="action" value="clear">Clear Steps</button>
+            </div>
+        </form>
+
+        {% if message %}
+        <div class="alert alert-info mt-3">{{ message }}</div>
+        {% endif %}
+
+        <footer class="mt-4">
+            <a href="/">Home</a>
+        </footer>
+    </div>
+</body>
+
+</html>
