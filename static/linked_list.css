@@ -7,10 +7,19 @@ body {
     align-items: center;
     height: 100vh;
     color: #000;
+    background-image: url('/static/images/LINKEDLIST.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+}
+
+filter {
+    filter: blur();
 }
 
 .container {
-    background: #fff;
+    background-image: url('/static/images/LINKEDLIST2.png');
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     padding: 40px;
@@ -41,9 +50,9 @@ header h1 {
 
 button {
     background: transparent;
-    border: 1px solid #c47c4d;
+    border: 1px solid #da70c7;
     border-radius: 20px;
-    color: #c47c4d;
+    color: #da70c7;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -52,13 +61,13 @@ button {
 }
 
 button:hover {
-    background-color: #ffd9c0;
+    background-color: #d39ec9;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
 input[type="text"] {
-    border: 1px solid #c47c4d;
+    border: 1px solid #da70c7;
     border-radius: 10px;
     padding: 10px;
     font-size: 1rem;
@@ -75,7 +84,50 @@ input[type="text"] {
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #7a7a7a;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    /* Enable flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically (if necessary) */
+    height: 10px;
+    /* Optional: Set a height for the footer to ensure vertical centering works */
+}
+
+footer .home-button {
+    text-decoration: none;
+    color: #da70c7;
+    /* Match the heading */
+    border: 1px solid #da70c7;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect with Movement */
+footer .home-button:hover {
+    background-color: transparent;
+    color: #fff;
+    transform: translateY(-5px);
+    /* Slight upward motion */
+    box-shadow: 0 5px 15px 333;
+    /* Add a shadow for depth */
+}
+
+/* Oscillation Effect */
+footer .home-button:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 2px dashed rgba(192, 119, 180, 0.5);
+    animation: pulse 1s infinite ease-in-out;
 }

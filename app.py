@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
+from flask_session import Session
 from queue_link_list import Queue
 from input_restricted_deque import InputRestrictedDeque
 from output_restricted_deque import OutputRestrictedDeque
@@ -6,9 +7,13 @@ from stack import infix_to_postfix
 
 app = Flask(__name__)
 
-# Initialize a simple linked list as a global list for demonstration
+# Configure Flask-Session and secret key
+app.secret_key = 'your_secret_key'  # Replace with a strong, unique key
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
+
+# Initialize data structures
 linked_list_data = []
-postfix_steps = []
 queue = Queue()
 inputrestricted = InputRestrictedDeque()
 outputrestricted = OutputRestrictedDeque()
@@ -36,9 +41,7 @@ def contact():
 
 @app.route('/linked_list', methods=['GET', 'POST'])
 def linked_list():
-    global linked_list_data
-
-    message = None  # Message to display feedback
+    message = None  # Feedback message
 
     if request.method == 'POST':
         action = request.form['action']
@@ -49,7 +52,6 @@ def linked_list():
         elif action == 'insert_end':
             linked_list_data.append(value)
         elif action == 'search':
-            # Searching for the value in the linked list
             if value in linked_list_data:
                 message = f'Value "{value}" found at index {
                     linked_list_data.index(value)}.'
@@ -72,30 +74,34 @@ def linked_list():
     return render_template('linked_list.html', linked_list=linked_list_data, message=message)
 
 
-@app.route("/stack", methods=["GET", "POST"])
+@app.route('/stack', methods=['GET', 'POST'])
 def stack():
-    global postfix_steps
+    if "postfix_steps" not in session:
+        session["postfix_steps"] = []
+    postfix_steps = session["postfix_steps"]
+    message = None
     output = None
-    message = None  # Initialize message to avoid UnboundLocalError
 
-    if request.method == "POST":
+    if request.method == 'POST':
         action = request.form.get("action")
-
-        if action == "push":
+        if action == 'push':
             infix_expression = request.form.get("infix", "").strip()
-            if infix_expression:  # Only process if infix_expression is not empty
-                postfix_steps = infix_to_postfix(infix_expression)
-                output = "\n".join(postfix_steps)
-                message = "Conversion successful!"  # Inform user of successful conversion
+            if infix_expression:
+                try:
+                    postfix_steps = infix_to_postfix(infix_expression)
+                    session["postfix_steps"] = postfix_steps
+                    output = "\n".join(postfix_steps)
+                    message = "Conversion successful!"
+                except Exception as e:
+                    message = f"Error: {str(e)}"
+                    postfix_steps = []
             else:
                 message = "Please enter a valid infix expression."
-        elif action == "clear":
-            # Clear the result and reset steps
+        elif action == 'clear':
             postfix_steps = []
-            output = None
-            message = "Stack cleared."
-
-    return render_template("stack.html", output=output, message=message)
+            session["postfix_steps"] = postfix_steps
+            message = "Steps cleared."
+    return render_template('stack.html', postfix_steps=postfix_steps, message=message)
 
 
 @app.route('/queue_file', methods=['GET', 'POST'])
@@ -136,14 +142,12 @@ def input_restricted_deque_operations():
                 message = f'"{value}" enqueued.'
             else:
                 message = 'Please provide a value to enqueue.'
-
         elif action == 'deque_at_beginning':
             dequeued_head_value = inputrestricted.dequeue_at_beginning()
             if dequeued_head_value:
                 message = f'Dequeued value: "{dequeued_head_value}".'
             else:
                 message = 'Queue is empty. Nothing to dequeue.'
-
         elif action == 'deque_at_end':
             dequeued_tail_value = inputrestricted.dequeue_at_end()
             if dequeued_tail_value:
@@ -168,14 +172,12 @@ def output_restricted_deque_operations():
                 message = f'"{value}" enqueued.'
             else:
                 message = 'Please provide a value to enqueue.'
-
         elif action == 'enqueue_at_beginning':
             if value:
                 outputrestricted.enqueue_at_beginning(value)
                 message = f'"{value}" enqueued.'
             else:
                 message = 'Please provide a value to enqueue.'
-
         elif action == 'dequeue_at_beginning':
             dequeued_head_value = outputrestricted.dequeue_at_beginning()
             if dequeued_head_value:

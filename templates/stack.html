@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infix to Postfix Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stack.css') }}">
 </head>
 
 <body>
@@ -13,9 +13,7 @@
         <h1 class="text-center">Infix to Postfix Converter</h1>
 
         <div class="card mt-4">
-            <div class="card-header">
-                Conversion Steps:
-            </div>
+            <div class="card-header">Conversion Steps:</div>
             <div class="card-body">
                 <ul id="conversionSteps">
                     {% for item in postfix_steps %}
@@ -44,8 +42,8 @@
         <div class="alert alert-info mt-3">{{ message }}</div>
         {% endif %}
 
-        <footer class="mt-4">
-            <a href="{{ url_for('works') }}" class="home-button">Works</a>
+        <footer>
+            <a href="{{ url_for('home') }}" class="home-button">Home</a>
         </footer>
     </div>
 </body>
