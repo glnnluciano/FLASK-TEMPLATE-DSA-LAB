@@ -1,3 +1,5 @@
+<!--WORKS.html-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +18,24 @@
     <main>
         <div class="card">
             <p><a href="{{ url_for('linked_list') }}">Linked List</a></p>
+        </div>
 
-        </div>
         <div class="card">
-            <p>Queue</p>
+            <p><a href="{{ url_for('stack') }}">Stack</p>
         </div>
+
         <div class="card">
-            <p>Stack</p>
+            <p><a href="{{ url_for('queue_operations') }}">Queue</a></p>
+        </div>        
+
+        <div class="card">
+            <p><a href="{{ url_for('input_restricted_deque_operations') }}">Input Restricted Deque</a></p>
         </div>
+
+        <div class="card">
+            <p><a href="{{ url_for('output_restricted_deque_operations') }}">Input Restricted Deque</a></p>
+        </div>
+
         <div class="card">
             <p>Trees</p>
         </div>

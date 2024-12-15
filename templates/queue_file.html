@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Operations</title>
+</head>
+<body>
+    <h1>Queue Operations</h1>
+
+    <h2>Current Queue:</h2>
+    <ul>
+        {% for item in queue %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        {% if not queue %}
+            <li><em>Queue is empty</em></li>
+        {% endif %}
+    </ul>
+
+    <h2>Perform an Operation:</h2>
+    <form method="POST">
+        <label for="value">Enter value:</label>
+        <input type="text" name="value" id="value" required>
+        <button type="submit" name="action" value="enqueue">Enqueue</button>
+        <button type="submit" name="action" value="dequeue">Dequeue</button>
+    </form>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <footer class="mt-4">
+        <a href="/">Home</a>
+    </footer>
+</body>
+</html>
